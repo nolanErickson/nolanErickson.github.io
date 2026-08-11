@@ -1,16 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nolan Erickson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    
+    <!-- HEADER SECTION -->
+    <header>
+      <p class="status">● Seeking junior positions &amp; internships.</p>
+      <h1>Nolan Erickson</h1>
+      <p class="bio">
+        Software developer and student of computer science.
+      </p>
+      <div class="links">
+        <a href="https://github.com/nolanErickson" class="btn-link" target="_blank" rel="noopener">GitHub ➚</a>
+        <a href="https://linkedin.com/in/nolan-erickson" class="btn-link" target="_blank" rel="noopener">LinkedIn ➚</a>
+        <a href="#contact" class="btn-link">Email ➚</a>
+      </div>
+    </header>
 
-    <body>
-        <div>
-            <h1>Nolan Erickson</h1>
-            <p>
-                Computer science student.
-            </p>
+    <!-- PROJECTS SECTION -->
+     <!-- TEMPLATE -->
+      <template>
+        <article class="project-row">
+        <div class="project-image">
+          <div class="image-placeholder"></div>
         </div>
-    </body>
+        <div class="project-content">
+          <div class="project-header">
+            <h3>
+              <a href="#" target="_blank" rel="noopener">TITLE</a>
+            </h3>
+            <span class="arrow-icon">➚</span>
+          </div>
+          <p>DESCRIPTION</p>
+          <div class="tags">
+            <span>C#</span>
+            <span>.NET</span>
+            <span>Gemini</span>
+          </div>
+        </div>
+      </article>
+     </template>
+
+    <section>
+      <h2># PROJECTS</h2>
+      
+      <article class="project-row">
+        <div class="project-image">
+          <img src="images/gear-guru-readme.png" alt="Backpacking Gear Recommender app preview" loading="lazy">
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3>
+              <a href="https://github.com/alee182/Backpacking-Gear-Rec" target="_blank" rel="noopener">Backpacking Gear Recommender</a>
+            </h3>
+            <span class="arrow-icon">➚</span>
+          </div>
+          <p>An application integrating the Gemini API to provide personalized backpacking recommendations for your outdoor excursions.</p>
+          <div class="tags">
+            <span>C#</span>
+            <span>.NET MAUI</span>
+            <span>Gemini API</span>
+          </div>
+        </div>
+      </article>
+
+    <!-- EXPERIENCE/EDUCATION SECTION -->
+     <!-- TEMPLATE -->
+      <template>
+        <div class="experience-row">
+        <div class="exp-top">
+          <strong>TITLE</strong>
+          <strong>LOCATION/ORG</strong>
+        </div>
+        <div class="exp-bottom">
+          <span>DESCRIPTION</span>
+          <span class="exp-date">20xx &ndash; 20xx</span>
+        </div>
+      </div>
+      </template>
+
+    <section>
+      <h2># EDUCATION</h2>
+
+      <div class="experience-row">
+        <div class="exp-top">
+          <strong>Computer Science B.S. &amp Math Minor</strong>
+          <strong>UNC Charlotte</strong>
+        </div>
+        <div class="exp-bottom">
+          <span>Completed coursework in DSA, OOP, Databases, logic and algorithms, and more.</span>
+          <span class="exp-date">2022 &ndash; 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK SECTION -->
+    <section>
+      <h2># STACK</h2>
+      <div class="stack-grid">
+        <div class="stack-label">Languages</div>
+        <div class="stack-items">C# &nbsp; C &nbsp; SQL &nbsp; JavaScript &nbsp; Python</div>
+
+        <div class="stack-label">Frameworks</div>
+        <div class="stack-items">.NET MAUI &nbsp; Blazor &nbsp; Node.js &nbsp; Django</div>
+
+        <div class="stack-label">Tools</div>
+        <div class="stack-items">Linux/WSL &nbsp; Git &nbsp; MySQL</div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <h2># CONTACT</h2>
+      <p>Open to junior roles, internships, and interesting side projects.<br>The fastest way to reach me is email:</p>
+      <span class="contact-email">nolanerickson03 [at] gmail [dot] com</span>
+    </section>
+
+  </main>
+</body>
 </html>

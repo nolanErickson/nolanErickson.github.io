@@ -1,0 +1,302 @@
+/* style.css - Gruvbox Dark Palette */
+:root {
+  /* Gruvbox Core Dark Colors */
+  --bg: #282828;
+  --bg-soft: #32302f;
+  --bg-border: #504945;
+
+  /* Foreground / Text Colors */
+  --fg: #ebdbb2;          /* Cream / Main text */
+  --fg-muted: #a89984;    /* Light Gray / Secondary text */
+  --fg-dim: #928374;      /* Muted Gray / Captions */
+
+  /* Gruvbox Accents */
+  --green: #b8bb26;
+  --yellow: #fabd2f;
+  --blue: #83a598;
+  --aqua: #8ec07c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  margin: 0;
+  padding: 4rem 1.5rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Typography & Header */
+.status {
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  color: var(--fg);
+}
+
+h2 {
+  font-size: 0.95rem;
+  color: var(--yellow);
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.bio {
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+}
+
+/* Button Links (Top section) */
+.links {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.btn-link {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--bg-border);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.btn-link:hover {
+  border-color: var(--fg-dim);
+  color: var(--aqua);
+}
+
+/* Project Rows / Cards */
+.project-row {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--bg-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+
+.project-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Hover State: Card Border, Background Elevate, and Cursor */
+.project-row:hover {
+  border-color: var(--blue);
+  background-color: #383533;
+  transform: translateY(-2px);
+}
+
+/* Synchronize Text & Arrow Color Highlights on Card Hover */
+.project-row:hover .project-header h3 a,
+.project-row:hover .project-header a {
+  color: var(--aqua);
+}
+
+.project-header .arrow-icon {
+  color: var(--blue);
+  font-size: 1.1rem;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.project-row:hover .arrow-icon {
+  color: var(--aqua);
+  transform: translate(2px, -2px);
+}
+
+/* Image Placeholder adjustments */
+.project-image {
+  flex: 0 0 160px; /* Restricts max container width */
+}
+
+.project-image img {
+  width: 100%;       /* Fills the 160px container width */
+  height: 90px;      /* Restricts fixed height */
+  object-fit: cover; /* Crops image cleanly to fill box without stretching */
+  border-radius: 4px;
+  border: 1px solid var(--bg-border);
+  display: block;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 90px;
+  background-color: var(--bg);
+  border: 1px solid var(--bg-border);
+  border-radius: 4px;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.project-header h3 a {
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+/* Stretches the click overlay across the entire parent card area */
+.project-header h3 a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.project-header a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.project-content p {
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0.75rem 0;
+  line-height: 1.5;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags span {
+  background-color: var(--bg-soft);
+  color: var(--fg-muted);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Experience Rows */
+.experience-row {
+  margin-bottom: 1.5rem;
+}
+
+.exp-top, .exp-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exp-top strong {
+  color: var(--fg);
+  font-size: 0.95rem;
+}
+
+.exp-bottom {
+  margin-top: 0.2rem;
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+  gap: 1rem;
+}
+
+/* Prevents the date from squeezing or breaking into two lines */
+.exp-date {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Stack Grid */
+.stack-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  row-gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.stack-label {
+  color: var(--fg-muted);
+}
+
+.stack-items {
+  color: var(--fg);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+/* Contact Section */
+.contact-section p {
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.contact-email {
+  color: var(--fg);
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  user-select: all;
+}
+
+.contact-email:hover {
+  color: var(--aqua);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+  .project-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project-image {
+    flex: auto;
+  }
+  .stack-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+  }
+  .stack-label {
+    margin-top: 0.5rem;
+  }
+}
